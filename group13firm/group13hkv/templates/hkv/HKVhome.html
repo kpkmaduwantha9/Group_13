@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+</head>
+<body>
+    <h1>Home Page</h1>
+    <a href="{% url 'funding' %}">Go to Funding Page</a>
+    <form method="POST">
+        {% csrf_token %}
+        <label for="member_name">Member Name</label><br>
+        <input type="text" name="member_name" id="member_name" required><br><br>
+        
+        <label for="member_cpm">Member CPM</label><br>
+        <input type="text" name="member_cpm" id="member_cpm" required><br><br>
+        
+        <label for="investment">Investment</label><br>
+        <input type="number" name="investment" id="investment" required><br><br>
+        
+        <button type="submit">Record Investment</button>
+    </form>
+    
+    
+</body>
+</html>
