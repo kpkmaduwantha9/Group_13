@@ -1,3 +1,4 @@
 from django.shortcuts import render
 
-# Create your views here.
+def hkvhome(request):
+    return render(request,'hkv/HKVhome.html',{})
